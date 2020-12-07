@@ -1,78 +1,71 @@
 /* Adam Purdon */
 
 /* Spartan 400, 500, 700 */
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
 
 :root {
-    /* off white */
-    --off-white: hsl(0, 0%, 98%);
-    --white: hsl(0, 0%, 100%);
+  /* off white */
+  --off-white: hsl(300, 43%, 97%);
+  --white: hsl(0, 0%, 100%);
 
-    /* Primary colors */
-    --primary-dark-magenta: hsl(300, 43%, 22%);
-    --primary-soft-pink: hsl(333, 80%, 67%);
+  /* Primary colors */
+  --primary-dark-magenta: hsl(300, 43%, 22%);
+  --primary-soft-pink: hsl(333, 80%, 75%);
 
-    /* Neutral colors */
-    --neutral-dark-gray: hsl(303, 10%, 53%);
-    --neutral-light-gray: hsl(300, 24%, 96%);
+  /* Neutral colors */
+  --neutral-dark-gray: hsl(303, 10%, 53%);
+  --neutral-light-gray: hsl(300, 24%, 96%);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Spartan', sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 15px;
-    font-weight: 400;
-    background-color: var(--white);
-    background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 35%, 35%;
-    background-attachment: fixed, fixed;
-    background-position: top left, bottom right;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: var(--white);
+  background-image: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 35%, 35%;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom right;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    height: 560px;
-    min-height: 560px;
-    width: 1050px;
-    min-width: 1050px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 560px;
+  min-height: 560px;
+  width: 1050px;
+  min-width: 1050px;
 }
 
 .blurp {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    width: 80%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 80%;
 }
 
-.blurp h1 {
-    font-size: 3em;
-    line-height: 44px;
-    letter-spacing: -2px;
-    margin-bottom: 15px;
-    color: var(--primary-dark-magenta);
-}
-
-.blurp p {
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -1px;
-    color: var(--neutral-dark-gray);
+.testimonials {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: space-between;
+  height: 90%;
 }
 
 .reviews {
@@ -82,49 +75,121 @@ body {
     flex-direction: column;
     justify-content: space-around;
     height: 75%;
+  }
+
+.blurp h1 {
+  font-size: 3em;
+  line-height: 44px;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+  color: var(--primary-dark-magenta);
 }
 
-.rectangle {
-    height: 55px;
-    width: 425px;
-    background-color: var(--neutral-light-gray);
-    display: flex;
-    align-items: center;
-    border-radius: 7px;
+.blurp p {
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -1px;
+  color: var(--neutral-dark-gray);
 }
 
-.review-one {
-    align-self: flex-start;
-}
-
-.review-two {
-    align-self: center;
-}
-
-.review-three {
-    align-self: flex-end;
+.review-box {
+  height: 55px;
+  width: 420px;
+  background-color: var(--neutral-light-gray);
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
 }
 
 .stars {
-    height: 100%;
-    width: 110px;
-    background-image: url(./images/icon-star.svg), url(./images/icon-star.svg), url(./images/icon-star.svg), url(./images/icon-star.svg), url(./images/icon-star.svg);
-    background-position: left center, 23px center, 46px center, 69px center, 92px center;
-    background-size: 16px;
-    background-repeat: no-repeat;
-    margin-right: 35px;
-    margin-left: 35px;
+  height: 100%;
+  width: 110px;
+  background-image: url(./images/icon-star.svg), url(./images/icon-star.svg),
+    url(./images/icon-star.svg), url(./images/icon-star.svg),
+    url(./images/icon-star.svg);
+  background-position: left center, 23px center, 46px center, 69px center,
+    92px center;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  margin-right: 35px;
+  margin-left: 35px;
 }
 
 .reviews p {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-dark-magenta);
+  letter-spacing: -0.5px;
+}
+
+.testimonial-card {
+  height: 215px;
+  width: 330px;
+  background-color: var(--primary-dark-magenta);
+  border-radius: 7px;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    height: 45%;
+}
+
+.testimonial-name {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.testimonial-header h1 {
     font-size: 13px;
     font-weight: 700;
-    color: var(--primary-dark-magenta);
+    color: var(--off-white);
+}
+
+.testimonial-header h2 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--primary-soft-pink);
+}
+
+.testimonial-content {
+    height: 55%;
+    margin: 0% 9%;
+}
+
+.testimonial-header img {
+    margin-left: 9%;
+    margin-right: 5%;
+    border-radius: 50px;
+    width: 50px;
+}
+
+.testimonial-card p {
+    color: var(--off-white);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0px 30px;
+    text-shadow: 0px -0.5px var(--neutral-dark-gray);
     letter-spacing: -0.5px;
 }
 
-.testimonials {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    background-color: red;
+.start {
+  align-self: flex-start;
+}
+
+.center {
+  align-self: center;
+}
+
+.end {
+  align-self: flex-end;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35); /* Firefox 3.5 - 3.6 */
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
