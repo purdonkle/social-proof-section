@@ -14,7 +14,7 @@
 
     /* Neutral colors */
     --neutral-dark-gray: hsl(303, 10%, 53%);
-    --neutral-light-gray: hsl(0, 0%, 100%);
+    --neutral-light-gray: hsl(300, 24%, 96%);
 }
 
 * {
@@ -25,7 +25,8 @@
 }
 
 body {
-    font-size: 15;
+    font-size: 15px;
+    font-weight: 400;
     background-color: var(--white);
     background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
     background-repeat: no-repeat, no-repeat;
@@ -47,22 +48,79 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    height: 70%;
-    min-height: 540px;
-    width: 80%;
-    min-width: 1000px;
+    height: 560px;
+    min-height: 560px;
+    width: 1050px;
+    min-width: 1050px;
 }
 
 .blurp {
     grid-column: 1/2;
     grid-row: 1/2;
-    background-color: blue;
+    width: 80%;
+}
+
+.blurp h1 {
+    font-size: 3em;
+    line-height: 44px;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+    color: var(--primary-dark-magenta);
+}
+
+.blurp p {
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -1px;
+    color: var(--neutral-dark-gray);
 }
 
 .reviews {
     grid-column: 2/3;
     grid-row: 1/2;
-    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 75%;
+}
+
+.rectangle {
+    height: 55px;
+    width: 425px;
+    background-color: var(--neutral-light-gray);
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.review-one {
+    align-self: flex-start;
+}
+
+.review-two {
+    align-self: center;
+}
+
+.review-three {
+    align-self: flex-end;
+}
+
+.stars {
+    height: 100%;
+    width: 110px;
+    background-image: url(./images/icon-star.svg), url(./images/icon-star.svg), url(./images/icon-star.svg), url(./images/icon-star.svg), url(./images/icon-star.svg);
+    background-position: left center, 23px center, 46px center, 69px center, 92px center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    margin-right: 35px;
+    margin-left: 35px;
+}
+
+.reviews p {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary-dark-magenta);
+    letter-spacing: -0.5px;
 }
 
 .testimonials {
