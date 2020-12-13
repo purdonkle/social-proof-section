@@ -24,6 +24,8 @@
   box-sizing: border-box;
 }
 
+
+/* -------- background images -------- */
 body {
   font-size: 15px;
   font-weight: 400;
@@ -36,6 +38,7 @@ body {
   background-position: top left, bottom right;
 }
 
+/* -------- grid setup -------- */
 .container {
   display: flex;
   justify-content: center;
@@ -54,6 +57,7 @@ body {
   width: 1050px;
 }
 
+/* -------- section setups -------- */
 .blurp {
   grid-column: 1/2;
   grid-row: 1/2;
@@ -78,6 +82,7 @@ body {
   height: 75%;
 }
 
+/* -------- section styling -------- */
 .blurp h1 {
   font-size: 3em;
   line-height: 44px;
@@ -177,6 +182,8 @@ body {
   letter-spacing: -0.5px;
 }
 
+/* -------- misc -------- */
+
 .start {
   align-self: flex-start;
 }
@@ -195,11 +202,14 @@ body {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
+
+/* -------- for screen smaller than 1050px -------- */
 @media only screen and (max-width: 1050px) {
   .container {
     min-width: 375px;
   }
 
+  /* grid becomes flex */
   .grid {
     display: flex;
     flex-direction: column;
@@ -208,6 +218,8 @@ body {
     width: 300px;
     height: auto;
   }
+
+  /* -------- section setups -------- */
 
   .blurp {
     display: flex;
@@ -220,15 +232,6 @@ body {
     margin-bottom: 40px;
   }
 
-  .blurp h1 {
-    text-align: center;
-    font-size: 2.5em;
-  }
-
-  .blurp p {
-    text-align: center;
-  }
-
   .reviews {
     display: flex;
     height: 260px;
@@ -236,6 +239,26 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
+  }
+
+  .testimonials {
+    flex-direction: column;
+    height: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  /* -------- section styling -------- */
+
+  .blurp h1 {
+    text-align: center;
+    font-size: 2.5em;
+  }
+
+  .blurp p {
+    text-align: center;
   }
 
   .review-box {
@@ -246,15 +269,6 @@ body {
 
   .stars {
     height: 65%;
-  }
-
-  .testimonials {
-    flex-direction: column;
-    height: 720px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
   }
 
   .testimonial-card {
